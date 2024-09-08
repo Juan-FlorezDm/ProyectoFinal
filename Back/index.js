@@ -1,11 +1,10 @@
 const express = require("express")
 const mongoose = require("mongoose")
 require("dotenv").config()
-
 const routerEstudiantes = require("./routes/estudiante.js")
 
 const app = express()
-const port = 3305
+const port = 3307
 
 app.set("port", port)
 
