@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <form submit="/api/estudiante" method="post" id="creacion">
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required maxlength="100">
+        
+        <label for="materias">Materias (separadas por coma):</label>
+        <input type="text" id="materias" name="materias">
+
+        <label for="asistencia">Asistencia (fechas separadas por coma):</label>
+        <input type="text" id="asistencia" name="asistencia">
+
+        <label for="tareas">Tareas (separadas por coma):</label>
+        <input type="text" id="tareas" name="tareas">
+    
+        <button id="send" type="submit">Enviar</button>
+    </form>
+    <script>
+        document.getElementById("creacion").addEventListener("submit", function(event){
+            event.preventDefault();
+        
+            const datos = {
+                nombre: document.getElementById("nombre").value,
+                materias: document.getElementById("materias").value,
+                asistencia: document.getElementById("asistencia").value,
+                tareas: document.getElementById("tareas").value
+            }
+        
+            fetch("api/estudiante", {
+                method: "POST",
+                headers: {"Content-type": "application/json"},
+                body: JSON.stringify(datos)
+            })
+                .then(res => res.json())
+                .then(window.location.href="/", alert("Agregado Correctamente"))
+                .catch(error => console.log(error))
+        })
+        </script>
+</body>
+
+
+</html>

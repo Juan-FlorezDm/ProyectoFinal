@@ -1,0 +1,88 @@
+
+:root {
+    --color1: #123e55;
+    --color2: #125466;
+    --color3: #147681;
+    --color4: #17a0a2;
+    --color5: #20dbc7;
+  }
+  
+.Content{
+    background-color: var(--color4);
+    border-radius: 30px;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body{
+    height: 90vh;
+    display: flex;
+
+    background-color: var(--color1);
+    color: white;
+
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Asistencia{
+    width: auto;
+    
+    box-shadow: 0 0 50px 1px var(--color1);
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+}
+
+.TomarAsistencia, .CrearEstudiante, .BuscarEstudiante{
+    
+    background-color: var(--color3);
+    border-radius: 15px;
+    box-shadow: 0 0 50px 1px var(--color3);
+
+    padding: 0.5rem;
+    height: 30%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+
+    margin: 2.5rem;
+}
+
+.Utilidades{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Utilidades, .Descargar, .Reporte, .Cerrar{
+    height: 20%;
+    margin: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    
+}
+
+.Descargar, .Reporte, .Cerrar{
+    background-color: var(--color3);
+    border-radius: 15px;
+    box-shadow: 0 0 50px 1px var(--color3);
+
+    padding: 0.5rem;
+    height: 30%;
+    width: auto;
+}
+
